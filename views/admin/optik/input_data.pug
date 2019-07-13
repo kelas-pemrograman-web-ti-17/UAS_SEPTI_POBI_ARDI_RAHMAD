@@ -1,0 +1,56 @@
+include  ../../admin/index
+// Content Wrapper. Contains page content
+.content-wrapper
+    // Content Header (Page header)
+    section.content-header
+        h1
+            | Data Produk Optik
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    |  Home
+            li
+                a(href='#') Tables
+            li.active Data tables
+    // Main content
+    section.content
+        .row
+            .col-xs-12
+                // /.box-body
+                // /.box
+                .box
+                    .box-body
+                        .box.box-info
+                            .box-header.with-border
+                                h3.box-title Input data Produk Optik
+                            // /.box-header
+                            // form start
+                            form.form-horizontal(method="post", action="/inputdata", role='form')
+                                .box-body
+                                    .form-group
+                                        label.col-sm-2.control-label(for='idproduk') ID Produk
+                                        .col-sm-10
+                                            input#idproduk.form-control(type='text' name="idproduk" placeholder='ID Produk')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='jenis') Jenis Produk
+                                        .col-sm-10
+                                            input#jenis.form-control(type='text' name="jenis" placeholder='Jenis Produk')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='merk') Merk
+                                        .col-sm-10
+                                            input#merk.form-control(type='text' name="merk" placeholder='Merk')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='harga') Harga Produk
+                                        .col-sm-10
+                                            input#harga.form-control(type='text' name="harga" placeholder='Harga Produk')
+                                    .form-group
+                                        label.col-sm-2.control-label(for='garansi') Garansi Produk
+                                        .col-sm-10
+                                            input#garansi.form-control(type='text' name="garansi" placeholder='Garansi Produk')
+
+
+                                // /.box-body
+                                .box-footer
+                                    button.btn.btn-info.pull-right(type='submit') Input Data
+                                // /.box-footer
